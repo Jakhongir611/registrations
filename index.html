@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="main_page">
+                <button class="main_btn btn_sign_in">Войти</button>
+                <button class="main_btn btn_sign_up">Регистрация</button>
+            </div>
+            <div class="sign_in active">
+                <form class="form in" action="" name="form">
+                    <input class="input" required minlength="3" maxlength="30" name="gmail_in" type="email"
+                        placeholder="@email.com" title="@email">
+                    <input class="input" required minlength="8" maxlength="15" name="pass_in" type="password"
+                        placeholder="Пароль" title="Пароль">
+                    <div class="sex">
+                        <label>
+                            <input name="chack" class="checkbox" type="checkbox">Забыл пароль
+                        </label>
+                    </div>
+                    <button class="btn">Войти</button>
+                </form>
+                <button class="btn_x_1">
+                    <span class="spn1"></span>
+                    <span class="spn2"></span>
+                </button>
+            </div>
+            <div class="sign_up active">
+                <form class="form up" action="" name="form">
+                    <input class="input" required minlength="3" maxlength="15" name="txt_1" type="text" id="txt_1"
+                        placeholder="Имя" title="Имя">
+                    <input class="input" required minlength="3" maxlength="15" name="txt_2" type="text" id="txt_2"
+                        placeholder="Фамилия" title="Фамилия">
+                    <input class="input" required minlength="8" maxlength="15" name="pass" type="password" id="pass"
+                        placeholder="Пароль" title="Пароль">
+                    <input class="input" required minlength="3" maxlength="30" name="email" type="email" id="email"
+                        placeholder="@email.com" title="@email">
+                    <div class="sex">
+                        <label>
+                            <input name="chack" class="checkbox" type="checkbox">Мужской
+                        </label>
+                        <label>
+                            <input name="chack" class="checkbox" type="checkbox">Женский
+                        </label>
+                    </div>
+                    <button class="btn">Регистрация</button>
+                </form>
+                <button class="btn_x_2">
+                    <span class="spn1"></span>
+                    <span class="spn2"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
