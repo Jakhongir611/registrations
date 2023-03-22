@@ -7,61 +7,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jaxongir</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./font/stylesheet.css">
 </head>
 
 <body>
-    <div class="wrap">
-        <div class="container">
-            <div class="main_page">
-                <button class="main_btn btn_sign_in">Войти</button>
-                <button class="main_btn btn_sign_up">Регистрация</button>
-            </div>
-            <div class="sign_in active">
-                <form class="form in" action="" name="form">
-                    <input class="input" required minlength="3" maxlength="30" name="gmail_in" type="email"
-                        placeholder="@email.com" title="@email">
-                    <input class="input" required minlength="8" maxlength="15" name="pass_in" type="password"
-                        placeholder="Пароль" title="Пароль">
-                    <div class="sex">
-                        <label>
-                            <input name="chack" class="checkbox" type="checkbox">Забыл пароль
-                        </label>
-                    </div>
-                    <button class="btn">Войти</button>
-                </form>
-                <button class="btn_x_1">
-                    <span class="spn1"></span>
-                    <span class="spn2"></span>
-                </button>
-            </div>
-            <div class="sign_up active">
-                <form class="form up" action="" name="form">
-                    <input class="input" required minlength="3" maxlength="15" name="txt_1" type="text" id="txt_1"
-                        placeholder="Имя" title="Имя">
-                    <input class="input" required minlength="3" maxlength="15" name="txt_2" type="text" id="txt_2"
-                        placeholder="Фамилия" title="Фамилия">
-                    <input class="input" required minlength="8" maxlength="16" name="pass" type="password" id="pass"
-                        placeholder="Пароль" title="Пароль">
-                    <input class="input" required minlength="3" maxlength="35" name="email" type="email" id="email"
-                        placeholder="@email.com" title="@email">
-                    <div class="sex">
-                        <label>
-                            <input name="chack" class="checkbox" type="checkbox">Мужской
-                        </label>
-                        <label>
-                            <input name="chack" class="checkbox" type="checkbox">Женский
-                        </label>
-                    </div>
-                    <button class="btn">Регистрация</button>
-                </form>
-                <button class="btn_x_2">
-                    <span class="spn1"></span>
-                    <span class="spn2"></span>
-                </button>
-            </div>
+    <div class="container">
+        <p class="header_text">Example form</p>
+        <div class="counts">
+            <span class="all">All:</span>
+            <span class="need">Need:</span>
+            <span class="success">Success:</span>
+            <span class="error">Error:</span>
         </div>
+        <form class="wrapper">
+            <div class="form">
+                <div class="block left">
+                    <label>Name
+                        <input class="importman outline_blue" type="text" name="name">
+                        <span>Need to fill</span>
+                        <img src="./img/Shape.png" width="16" class="pos_none" alt="">
+                    </label>
+                    <label>Surname
+                        <input type="text" name="surname">
+                        <span class="m_bot"></span>
+                    </label>
+                    <label>Email adress
+                        <input class="importman outline_blue" type="email" name="email">
+                        <span>Need to fill</span>
+                        <img src="./img/Shape.png" width="16" class="pos_none" alt="">
+                    </label>
+                    <label>Phone number
+                        <input type="number" name="number">
+                        <span class="m_bot"></span>
+                    </label>
+                    <label>Your Mom’s name
+                        <input type="text" name="mother_name">
+                        <span class="m_bot"></span>
+                    </label>
+                    <label>Your Pap’s name
+                        <input type="text" name="father_name">
+                        <span class="m_bot"></span>
+                    </label>
+                </div>
+                <div class="block right">
+                    <label>Age
+                        <input class="importman outline_blue" type="number" name="age">
+                        <span>Need to fill</span>
+                        <img src="./img/Shape.png" width="16" class="pos_none" alt="">
+                    </label>
+                    <label>About You
+                        <input class="importman outline_blue" type="text" name="about_you">
+                        <span>Need to fill</span>
+                        <img src="./img/Shape.png" width="16" class="pos_none" alt="">
+                    </label>
+                    <label>What is JavaScript?
+                        <input class="importman outline_blue" type="text" name="what_is_importman javascript">
+                        <span>Need to fill</span>
+                        <img src="./img/Shape.png" width="16" class="pos_none" alt="">
+                    </label>
+                    <label>What is HTML?
+                        <input class="importman outline_blue" type="text" name="what_is_html">
+                        <span>Need to fill</span>
+                        <img src="./img/Shape.png" width="16" class="pos_none" alt="">
+                    </label>
+                    <label>What is CSS?
+                        <input class="importman outline_blue" type="text" name="what_is_css">
+                        <span>Need to fill</span>
+                        <img src="./img/Shape.png" width="16" class="pos_none" alt="">
+                    </label>
+                    <label>Your favourite car
+                        <input type="text" name="your_favourite_car">
+                        <span class="m_bot"></span>
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn_save_blue">Save changes</button>
+        </form>
+
+
+
+
     </div>
+
+
 
 
 
