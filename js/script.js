@@ -1,16 +1,18 @@
-const doc = document;
-const form = doc.querySelector('form');
-const input = doc.querySelectorAll('input');
-const all = doc.querySelector('.all');
-const need = doc.querySelector('.need');
-const success = doc.querySelector('.success');
-const error = doc.querySelector('.error');
-const importman = doc.querySelectorAll('.importman');
-const btn = doc.querySelector('.btn_save_blue');
-const cls_blue = doc.querySelectorAll('.outline_blue');
-const cls_red = doc.querySelectorAll('.outline_red');
-const photo = doc.querySelectorAll('.pos_none');
-const img = doc.querySelectorAll('img')
+let doc = document;
+let form = doc.querySelector('form');
+let input = doc.querySelectorAll('input');
+let all = doc.querySelector('.all');
+let need = doc.querySelector('.need');
+let success = doc.querySelector('.success');
+let error = doc.querySelector('.error');
+let importman = doc.querySelectorAll('.importman');
+let btn = doc.querySelector('.btn_save_blue');
+let cls_blue = doc.querySelectorAll('.outline_blue');
+let cls_red = doc.querySelectorAll('.outline_red');
+let photo = doc.querySelectorAll('.pos_none');
+let img = doc.querySelectorAll('img')
+let inputss = doc.querySelectorAll('.inputss')
+
 
 all.textContent = 'All: ' + input.length
 need.textContent = 'Need: ' + importman.length
@@ -19,7 +21,7 @@ need.textContent = 'Need: ' + importman.length
 
 
 
-const po_kayfu = () => {
+let po_kayfu = () => {
     for (let item of cls_blue) {
         if (!item.value) {
             item.classList.remove('outline_blue');
@@ -30,34 +32,39 @@ const po_kayfu = () => {
 
 
 
-let filled__counter = (inputs) => {
-    let success = 0;
-    let error = 0;
-    let span = need
-    for (let item of importman) {
-        if (item.value) {
-            success++
-        }
-        else {
-            error++
-        }
-        mandatory__inputs(error)
-        return {
-            count__success: success,
-            error: error,
-        }
-    }
-}
 
-let mandatory__inputs = (error) => {
-    if (error == 0) {
-        for (let item of input) {
-            item.value = ''
+
+
+
+let succe = ()=>{
+    let errorr = 0
+    for(let i of importman){
+        if(!i.value){
+            errorr++
         }
     }
+    return errorr // 7  
 }
 
 
+// console.log(7)
+
+
+// form__registration.addEventListener('submit', (event) => {
+//     event.preventDefault()
+
+//     event.preventDefault()
+//     return__to__previous__value()
+//     for (let item of need__inputs) {
+//         item.style.boxShadow = '0px 0px 0px 0px'
+//     }
+
+//     let sending__data = filled__counter(inputs)
+//     all.textContent = 'All: ' + count__all
+//     need.textContent = 'Need: ' + count__need
+//     success.textContent = 'Success: ' + sending__data.count__success
+//     error.textContent = 'Error: ' + sending__data.error
+// })
 
 
 
@@ -71,10 +78,11 @@ let mandatory__inputs = (error) => {
 
 
 
-
-form.addEventListener('submit', (event) => {
+btn.addEventListener('click', (event) => {
     event.preventDefault()
     po_kayfu(form)
+    error.textContent = 'Error: ' + succe()
+    success.textContent = 'Success: ' + (importman.length - succe())
 })
 
 
@@ -95,7 +103,7 @@ form.addEventListener('submit', (event) => {
 // need.textContent = 'Need: ' + importman.length
 
 
-// const po_kayfu = (input) => {
+// let po_kayfu = (input) => {
 //     for (let item of cls) {
 //         if (item.value === "") {
 //             item.classList.remove('outline_blue')
@@ -107,7 +115,7 @@ form.addEventListener('submit', (event) => {
 // }
 
 
-// const po_kayfu2 = (input) => {
+// let po_kayfu2 = (input) => {
 //     form.addEventListener('submit', (event) => {
 //         event.preventDefault()
 //         po_kayfu(input)
